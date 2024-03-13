@@ -1,0 +1,18 @@
+.text{
+    color: rgb(1, 1, 1);
+    padding-top: 350px;
+    padding-left: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    position: fixed;
+    width: 850px;
+  }
+  .text1{
+    color: rgb(12, 8, 10);
+    padding-top: 400px;
+    padding-left: 35px;
+    font-size: 30px;
+    position: fixed;
+    width: 850px;
+  }
+  
