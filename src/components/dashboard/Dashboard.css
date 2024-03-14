@@ -50,6 +50,7 @@
     background-repeat: no-repeat;
   
 }
+h1{color: brown;}
 .tile:hover{
   width: 100%;
   border-radius: 3em;
