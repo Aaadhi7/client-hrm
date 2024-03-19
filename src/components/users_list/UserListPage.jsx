@@ -38,8 +38,8 @@ const UserListPage = () => {
             <th>Last Name</th>
             <th>Email</th>
             <th>Password</th>
-            <th>Edit</th>
-            <th>Save</th>
+            <th>View</th>
+          
           </tr>
         </thead>
         <tbody>
@@ -60,11 +60,9 @@ const UserListPage = () => {
               </td>
 
               <td>
-                <button onClick={() => handleEdit(data._id)}>Edit</button>
+                <button onClick={() => handleEdit(data._id)}>View</button>
               </td>
-              <td>
-                <button onClick={() => handleSave(data._id)}>Save</button>
-              </td>
+         
             </tr>
           ))}
         </tbody>

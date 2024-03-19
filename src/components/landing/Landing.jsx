@@ -8,6 +8,8 @@ import AddUser from "../add_user/AddUser";
 import Dashboard from "../dashboard/DashBoard";
 // import Display from "../display/Display";
 import UserList from "../users_list/UserList";
+import ForgotPasswordForm from "../forgotpassword/ForgotPasswordForm";
+import ForgotPasswordFormPage from "../forgotpassword/ForgotPasswordFormPage";
 
 function Landing() {
     return(
@@ -24,6 +26,7 @@ function Landing() {
             <Route path="/add_user" exact element={<AddUser/>}/>
             <Route path="/home" exact element = {<Landing_Page/>}/>
             <Route path="viewUser" exact element = {<UserList/>}/>
+            <Route path="forgotpassword" exact element = {<ForgotPasswordForm/>}/>
         </Routes>
         </>
        </Router> 
