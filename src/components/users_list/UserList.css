@@ -1,7 +1,15 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
 table {
     /* width: 100%; */
     border-collapse: collapse;
+position: fixed;
     margin-top: 150px;
    width: 900px;
     margin: 100px;
@@ -10,17 +18,24 @@ table {
   
 
   th {
-    background-color: #443b3b;
+    background-color: #f33c3c;
     padding: 10px;
     text-align: left;
     font-weight: bold;
+    
   
   }
   
  
   tr:nth-child(even) {
-    background-color: #d1b0b0;
+    background-color: #f7f5f5;
   } 
+  img{
+   
+    height :20px;
+    
+  }
+ 
   
 
   td {
@@ -38,7 +53,7 @@ table {
 
   button {
     background-color: #4caf50;
-    color: rgb(255, 255, 255);
+    color: rgb(247, 240, 240);
     border: none;
     padding: 8px 12px;
     text-align: center;
@@ -51,6 +66,13 @@ table {
   
   
   button:hover {
-    background-color: #010501;
+    background-color: #264e26;
   }
+tbody{
+  background-color: #bdf8c0;
+
+ 
+}
+
+  
  

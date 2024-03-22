@@ -1,0 +1,27 @@
+.user-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .user-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

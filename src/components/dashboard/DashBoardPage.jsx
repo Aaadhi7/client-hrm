@@ -6,49 +6,48 @@ export default function DashBoardPage() {
         <div className='app-container'>
           <div className='img-nav'>
     
-            
+            <Link to={'/add_user'}>
             <div className='tile'>
-              <Link to={'/add_user'}>
+              
               <div className='content'>
                 <h1>ADD USER</h1>
                 
-              </div></Link>
+              </div>
              
-            </div>
+            </div></Link>
             
             
     
             {/* Tile 2 */}
-            <div className='tile'>
             <Link to={'/'}>
-              <div className='content'>
-                <h1>HOME</h1>
-                
-              </div></Link>
-              
-             
+          <div className='tile'>
+            <div className='content'>
+              <h1>HOME</h1>
             </div>
+          </div>
+        </Link>
     
             {/* Tile 3 */}
-            
+            <Link to={'/viewUser'}>
             <div className='tile'>
-              <Link to={'/viewUser'}>
+              
               <div className='content'>
                 <h1>USER LIST</h1>
               
               </div>
-              </Link>
-            </div>
+              
+            </div></Link>
     
             {/* Tile 4 */}
+            <Link to={'/viewUser'}>
             <div className='tile'>
               
               <div className='content'>
                 <h1>LOGOUT</h1>
                 
               </div>
-              <div className='img'></div>
-            </div>
+              {/* <div className='img'></div> */}
+            </div></Link>
     
           </div>
         </div>

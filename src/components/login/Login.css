@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    
 }
 .error-message {
     color: red;
@@ -26,7 +27,7 @@
 
 
 body {
-    
+    overflow: hidden;
     box-sizing: border-box;
     font-family: "poppins";
     background: var(--background);
@@ -349,7 +350,7 @@ h1 {
     display: none;
   }
   
-  /*Stying for small screens*/
+  
   @media screen and (max-width: 800px){
     nav{
         position: fixed;
@@ -422,3 +423,34 @@ h1 {
   .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
   }
+
+  /* spinner */
+
+
+  .spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5);  */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
