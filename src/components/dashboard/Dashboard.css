@@ -314,3 +314,5 @@ h1{
   .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
   }
+
+  h1{color: #131418;}
