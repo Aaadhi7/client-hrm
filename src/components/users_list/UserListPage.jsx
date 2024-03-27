@@ -1,91 +1,65 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './UserList.css';
 import { Link } from 'react-router-dom';
+import EditPage from '../editPage/EditPage'; // Import EditPage component
 
 const UserListPage = () => {
   const [data, setData] = useState([]);
+  const [selectedUserId, setSelectedUserId] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('accessToken');
         const response = await axios.get('http://localhost:3000/users', {
-          // method: 'GET',
           headers: {
             'authorization': `Bearer ${token}`
-            
           }
-          
-          
         });
-       
-        
-
-        const parsedData = await response.data;
-        setData(parsedData.data);
+        setData(response.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-  
+
     fetchData();
-    
-  }, []); 
-  console.log("data : ", data);
+  }, []);
+
+  const handleEditUser = (userId) => {
+    setSelectedUserId(userId);
+    // console.log ("userId : ",userId)
+  };
 
   return (
     <div className='bg'>
       <h1>User List</h1>
-      {/* <div><h1>Total users : {data.length}</h1></div> */}
       <table>
         <thead>
           <tr>
-            {/* <th>ID</th> */}
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            {/* <th >Password</th> */}
-            {/* <th>View</th> */}
-            <th>  </th>
-            {/* <th>Save</th> */}
+            <th> </th>
           </tr>
         </thead>
         <tbody>
-          {data.map((data) => (
-            <tr key={data._id}>
-              {/* <td>{data._id}</td> */}
+          {data.map((userData) => (
+            <tr key={userData._id}>
+              <td>{userData.first_name}</td>
+              <td>{userData.last_name}</td>
+              <td>{userData.email}</td>
               <td>
-                <div>{data.first_name}</div>
+                <Link to={`/edit-user/${userData._id}`}>
+                  <button onClick={() => handleEditUser(userData._id)}><img src="src\components\assets\eye.png" alt="view" /></button>
+                </Link>
               </td>
-              <td>
-                <div>{data.last_name}</div>
-              </td>
-              
-              <td>
-                <div>{data.email}</div>
-              </td>
-              {/* <td>
-                <div>{data.password}</div>
-              </td> */}
-
-              <td>
-                {/* <button onClick={() => handleEdit(data._id)}> */}
-                <Link to={"/edit-user"}>
-                <button>
-                <img src="src\components\assets\eye.png" alt="view" />
-                </button></Link>
-              </td>
-              {/* <td>
-                <button onClick={() => handleSave(data._id)}>Save</button>
-              </td> */}
             </tr>
-            
           ))}
         </tbody>
       </table>
+      {selectedUserId && <EditPage userId={selectedUserId} />} 
     </div>
   );
-
 };
+
 export default UserListPage;

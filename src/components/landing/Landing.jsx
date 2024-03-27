@@ -11,6 +11,7 @@ import UserList from "../users_list/UserList";
 import EditPage from "../editPage/EditPage";
 import ForgotPassword from "../forgot_password/ForgotPassword";
 import ResetPasswordPage from "../reset-password/ResetPasswordPage";
+ 
 function Landing() {
     return(
 
@@ -26,11 +27,12 @@ function Landing() {
             <Route path="/add_user" exact element={<AddUser/>}/>
             <Route path="/home" exact element = {<Landing_Page/>}/>
             <Route path="/viewUser" exact element = {<UserList/>}/>
-            <Route path="/edit-user" exact element = {<EditPage/>}/>
+            <Route path="/edit-user/:id" exact element = {<EditPage/>}/>
             <Route path="/forgot-password" exact element = {<ForgotPassword/>}/>
             <Route path="/reset-password" exact element ={<ResetPasswordPage/>}/>
 
         </Routes>
+        
         </>
        </Router> 
        </>

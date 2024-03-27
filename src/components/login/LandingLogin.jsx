@@ -73,9 +73,10 @@ function LandingLogin() {
       if (response.data.statusCode === 200) {
         console.log('Login successful');
         localStorage.setItem('accessToken', response.data.data);
-        setShowPopup(true); 
-        setPopupType('success');
-        setPopupMessage('Login Successful');
+        // setShowPopup(true); 
+        // setPopupType('success');
+        // setPopupMessage('Login Successful');
+        navigate('/admin')
       } else {
         setErrorMessage('Login Failed!');
         setShowPopup('true');

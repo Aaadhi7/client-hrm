@@ -5,7 +5,6 @@
   font-family: sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
-  
 }
 table {
     /* width: 100%; */
@@ -13,13 +12,13 @@ table {
 position: fixed;
     margin-top: 150px;
    width: 900px;
-    margin: 150px;
-;
+    margin: 100px;
+    
   }
   
 
   th {
-    background-color: #153c92;
+    background-color: #f33c3c;
     padding: 10px;
     text-align: left;
     font-weight: bold;
@@ -48,7 +47,7 @@ position: fixed;
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
-    color: #c7cfbe;
+    color: #6fb622;
   }
   
 

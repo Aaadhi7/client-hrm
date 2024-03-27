@@ -84,11 +84,17 @@ function AddUserPage() {
       const HOSTED_SERVER_URL = 'http://localhost:3000';
 
       try {
+        const token = localStorage.getItem('accessToken')
         const response = await axios.post(`${HOSTED_SERVER_URL}/users`, {
           first_name,
           last_name,
           email,
           password,
+        },
+        {
+          headers : {
+            'Authorization ': `Bearer ${token}`
+          }
         });
 
         if (response && response.data && response.data.statusCode) {
